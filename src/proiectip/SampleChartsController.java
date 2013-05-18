@@ -40,7 +40,7 @@ public class SampleChartsController implements Initializable {
     @FXML
     private ToggleButton emotionsButton;
     @FXML
-    private HBox buttonListBox;
+    private HBox buttonListBox; 
     
     
     
