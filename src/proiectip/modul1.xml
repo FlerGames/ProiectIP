@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<comments>
+    <comment id="1" location="Iasi" data="18/5/2013">
+        TextTextTextTextText
+        TextTextText
+        TextText
+        TextTextTextTextTextTextText
+    </comment>
+    <comment id="2" location="Paris" data="16/10/2012">
+        TextTextText
+        TextTextTextText
+    </comment>
+    <comment id="3" location="Iasi" data="29/3/2013">
+        TextTextTextTextText
+        TextTextTextTextTextTextText
+    </comment>
+    <comment id="4" location="Moscow" data="12/9/2012">
+        TextTextTextTextText
+    </comment>
+    <comment id="5" location="London" data="1/1/2011">
+        TextText
+    </comment>
+</comments>
