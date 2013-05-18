@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="446.0000999999975" prefWidth="717.0" xmlns:fx="http://javafx.com/fxml" fx:controller="proiectip.SampleChartsController">
+  <children>
+    <SplitPane dividerPositions="0.2083916083916084" focusTraversable="true" prefHeight="446.0000999999975" prefWidth="717.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <items>
+        <AnchorPane maxWidth="200.0" minHeight="0.0" minWidth="120.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="169.0" style="-fx-background-color: grey;&#10;-fx-text-color: white;" text="Comentatori" textAlignment="CENTER" textFill="WHITE" textOverrun="ELLIPSIS" underline="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <font>
+                <Font name="Courier New Bold" size="16.0" />
+              </font>
+            </Label>
+            <ListView fx:id="userListView" prefHeight="373.0" prefWidth="146.0" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0" />
+            <Button fx:id="totalsButton" cancelButton="false" defaultButton="false" disable="false" mnemonicParsing="false" prefHeight="36.0" prefWidth="146.0" text="Totaluri" underline="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="">
+          <children>
+            <StackPane prefHeight="408.9999000000025" prefWidth="563.0" style="-fx-background-color: lightgrey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0">
+              <children>
+                <Button fx:id="importButton" defaultButton="true" mnemonicParsing="false" onAction="#importData" prefHeight="67.0" prefWidth="187.0" text="Import" textFill="WHITE">
+                  <font>
+                    <Font name="Bodoni MT" size="36.0" />
+                  </font>
+                </Button>
+              </children>
+            </StackPane>
+            <HBox fx:id="buttonListBox" alignment="CENTER" disable="false" prefHeight="36.0" prefWidth="564.0" spacing="5.0" style="-fx-background-color: grey;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <children>
+                <ToggleButton fx:id="mapsButton" disable="true" minHeight="30.0" minWidth="99.0" mnemonicParsing="false" onAction="#showMaps" selected="true" text="Hartă">
+                  <toggleGroup>
+                    <ToggleGroup fx:id="asd" />
+                  </toggleGroup>
+                </ToggleButton>
+                <ToggleButton fx:id="historyButton" minHeight="30.0" minWidth="99.0" mnemonicParsing="false" onAction="#showHistory" text="Istoric" toggleGroup="$asd" />
+                <ToggleButton fx:id="emotionsButton" minHeight="30.0" minWidth="99.0" mnemonicParsing="false" onAction="#showEmotions" text="Emoții" toggleGroup="$asd" />
+              </children>
+            </HBox>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+</AnchorPane>
