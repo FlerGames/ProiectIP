@@ -10,18 +10,31 @@ package models;
  * @author Ion Caliman
  */
 public class Comment {
-    private String text;
-    private String author;
-    private String location;
-    private String data;
-    private String type;
+    private String id = "0";
+    private String text = "numic";
+    private String author = "anonim";
+    private String location = "Iasi";
+    private String data = "1/1/2013";
+    private String type = "positiv";
 
-    public Comment(String text, String author, String location, String data, String type) {
+    public Comment() {
+    }
+    
+    public Comment(String id, String text, String author, String location, String data, String type) {
+        this.id = id;
         this.text = text;
         this.author = author;
         this.location = location;
         this.data = data;
         this.type = type;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getText() {
@@ -62,5 +75,10 @@ public class Comment {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Comment{" + "\n\tid=" + id + ", \n\ttext=" + text + ", \n\tauthor=" + author + ", \n\tlocation=" + location + ", \n\tdata=" + data + ", \n\ttype=" + type + "\n}";
     }
 }

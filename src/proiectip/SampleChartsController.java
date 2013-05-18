@@ -5,6 +5,7 @@
 package proiectip;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.layout.HBox;
+import models.Comment;
 
 /**
  *
@@ -20,12 +22,7 @@ import javafx.scene.layout.HBox;
  */
 public class SampleChartsController implements Initializable {
     
-    enum tipStatistica{
-        statisticaHarta,
-        statisticaInstoric,
-        statisticaEmotii
-    }
-    private tipStatistica statistica = tipStatistica.statisticaHarta;
+    ArrayList<Comment> comments;
     
     @FXML
     private ListView userListView;
@@ -48,7 +45,14 @@ public class SampleChartsController implements Initializable {
     private void importData(ActionEvent event) {
         System.out.println("Importa datele...");
         
-        dataImported();
+        comments = XMLParser.importData();
+        for (Comment comment : comments) {
+            userListView.getItems().add(comment.getAuthor());
+        }
+        
+        importButton.setVisible(false);
+        totalsButton.setDisable(false);
+        buttonListBox.setDisable(false);
     }
     
     @FXML
@@ -76,12 +80,6 @@ public class SampleChartsController implements Initializable {
         historyButton.setDisable(false);
         emotionsButton.setDisable(true);
         
-    }
-    
-    private void dataImported() {
-        importButton.setVisible(false);
-        totalsButton.setDisable(false);
-        buttonListBox.setDisable(false);
     }
     
     @Override
