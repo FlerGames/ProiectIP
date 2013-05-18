@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<comments>
+    <comment id="1" type="positiv"></comment>
+    <comment id="2" type="nagativ"></comment>
+    <comment id="3" type="negativ"></comment>
+    <comment id="4" type="positiv"></comment>
+    <comment id="5" type="neutru"></comment>
+</comments>
